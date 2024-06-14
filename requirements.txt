@@ -12,3 +12,4 @@ scikit-learn==1.4.1.post1
 statsmodels==0.14.1
 category-encoders==2.6.3
 matplotlib==3.7.5
+openpyxl==3.1.2
