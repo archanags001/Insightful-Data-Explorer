@@ -2,6 +2,10 @@
 
 Welcome to the Data Explorer and Machine Learning App! This Streamlit-based application provides a comprehensive suite of tools for data analysis, visualization, feature engineering, and automated machine learning (AutoML).
 
+
+## [App link](https://insightful-data-explorer-001.streamlit.app)
+
+
 ## Table of Contents
 - [Features](#features)
 - [Technologies](#Technologies)
