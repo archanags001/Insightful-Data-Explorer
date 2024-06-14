@@ -6,6 +6,11 @@ from clustering_pycaret import clusteringPycaret
 from forcasting_pycaret import timeseriesPycaret
 from anomaly_pycaret import anomalyPycaret
 
+@st.cache_data
+def data_load():
+    if 'df' in st.session_state:
+        return st.session_state.df
+        
 def ml_models():
 
     if 'page' not in st.session_state:
@@ -19,7 +24,7 @@ def ml_models():
     """)
     st.info("Please note that there may be some processing delay during the AutoML execution.")
 
-    dataset = st.session_state.df
+    dataset = dataset = data_load()
 
 
     if len(dataset) > 0:
