@@ -4,7 +4,7 @@ Welcome to the Data Explorer and Machine Learning App! This Streamlit-based appl
 
 ## Table of Contents
 - [Features](#features)
-- [Contributing](#contributing)
+- [Technologies](#Technologies)
 
 
 ## Features
