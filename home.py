@@ -96,7 +96,7 @@ def home_page():
 
         If you have any questions or need assistance, feel free to reach out to .
 
-        #### **Happy Data Analyzing!**
+        **Happy Data Analyzing!**
 
         ---
         """)
