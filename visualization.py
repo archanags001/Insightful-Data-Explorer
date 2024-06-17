@@ -4,9 +4,11 @@ from pygwalker.api.streamlit import StreamlitRenderer
 from auto_viz import autoVizs
 
 def pywalkr(dataset):
-    pyg_app = StreamlitRenderer(dataset)
-
-    pyg_app.explorer()
+        try:
+        pyg_app = StreamlitRenderer(dataset)
+        pyg_app.explorer()
+    except Exception as e:
+        st.error(str(e))
 def visualizatn():
 
     if 'page' not in st.session_state:
