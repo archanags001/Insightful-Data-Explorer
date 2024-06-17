@@ -4,7 +4,7 @@ from pygwalker.api.streamlit import StreamlitRenderer
 from auto_viz import autoVizs
 
 def pywalkr(dataset):
-        try:
+    try:
         pyg_app = StreamlitRenderer(dataset)
         pyg_app.explorer()
     except Exception as e:
