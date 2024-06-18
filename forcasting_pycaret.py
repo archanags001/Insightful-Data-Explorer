@@ -98,7 +98,7 @@ def timeseriesPycaret():
                         save_model(best, "best_model")
                         st.session_state.model_saved = True
                         col2.dataframe(pull())
-                except ValueError as e:
+                except Exception as e:
                     st.error(str(e))
 
                 nav_option = option_menu(menu_title="Models", options=["Best model","Specific Model"], orientation='horizontal')
