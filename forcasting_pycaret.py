@@ -79,27 +79,28 @@ def timeseriesPycaret():
             if st.session_state.button_clicked:
                 st.write("### Prepared Dataset")
                 st.dataframe(data_preped)
-                try:
-                    s = setup(data_preped, fh=fh, fold=folds, seasonal_period=seasonal_period,
-                              fold_strategy=window_splitter, fig_kwargs=fig_kwargs, session_id=123, verbose=False)
-                    with (st.container(border=True)):
-                        st.markdown('<p style="color:#4FFF33"> ### Setup Successfully Completed!</p>', unsafe_allow_html=True)
-                        setup_df = pull()
-                        st.write("#### ", setup_df.iloc[25][0], ":", setup_df.iloc[25][1])
-                        col1, col2 = st.columns(2)
-                        col1.dataframe(pull())
-                        with col2:
-                            plot_model(display_format='streamlit')
-                        col1.write("### Check Stats")
-                        col1.dataframe(check_stats())
-                        col2.write('#### Comparing All Models')
-                        best = compare_models()
-                        models_df = pull()
-                        save_model(best, "best_model")
-                        st.session_state.model_saved = True
-                        col2.dataframe(pull())
-                except Exception as e:
-                    st.error(str(e))
+                with st.spinner("Running......"):
+                    try:
+                        s = setup(data_preped, fh=fh, fold=folds, seasonal_period=seasonal_period,
+                                  fold_strategy=window_splitter, fig_kwargs=fig_kwargs, session_id=123, verbose=False)
+                        with (st.container(border=True)):
+                            st.markdown('<p style="color:#4FFF33"> ### Setup Successfully Completed!</p>', unsafe_allow_html=True)
+                            setup_df = pull()
+                            st.write("#### ", setup_df.iloc[25][0], ":", setup_df.iloc[25][1])
+                            col1, col2 = st.columns(2)
+                            col1.dataframe(pull())
+                            with col2:
+                                plot_model(display_format='streamlit')
+                            col1.write("### Check Stats")
+                            col1.dataframe(check_stats())
+                            col2.write('#### Comparing All Models')
+                            best = compare_models()
+                            models_df = pull()
+                            save_model(best, "best_model")
+                            st.session_state.model_saved = True
+                            col2.dataframe(pull())
+                    except Exception as e:
+                        st.error(str(e))
 
                 nav_option = option_menu(menu_title="Models", options=["Best model","Specific Model"], orientation='horizontal')
                 # nav_option = st.selectbox("Select a model option",["Best model","Specific Model"])
