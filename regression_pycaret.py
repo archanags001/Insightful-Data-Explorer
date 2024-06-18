@@ -104,15 +104,20 @@ def regressionPycaret():
                     st.error(str(e))
                 st.markdown('<p style="color:#4FFF33">Setup Successfully Completed!</p>', unsafe_allow_html=True)
                 st.dataframe(pull())
-                # get best model
-                try:
+                with st.spinner("Running......"):
+                    # get best model
                     best_reg = compare_models()
-                except KeyError as e:st.error(str(e))
-                # get the scoring grid
-                results_reg = pull()
-                st.write("### Best Model: ", results_reg['Model'].iloc[0])
-                st.write('#### Comparing All Models')
-                model_df_reg = st.dataframe(pull())
+                    # get the scoring grid
+                    results_reg = pull()
+                    try:
+                        st.write("### Best Model: ", results_reg['Model'].iloc[0])
+                    except Exception as e:
+                        st.error("Something appears to be incorrect. Please ensure that your target columns and features "
+                                     "are selected correctly. If you encounter any further issues, feel free to reach out. "
+                                     "Contact information can be found on the 'About' page.")
+                    # st.write("### Best Model: ", results_reg['Model'].iloc[0])
+                    st.write('#### Comparing All Models')
+                    model_df_reg = st.dataframe(pull())
 
                 # # Get the name of the best model
                 # model_name_reg = None
