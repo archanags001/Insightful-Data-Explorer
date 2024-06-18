@@ -98,10 +98,11 @@ def clusteringPycaret():
                 st.dataframe(pull())
                 # st.write("Model created")
                 model_id = model_df[model_df['Name'] == cluster_model].index[0]
-                if num_clusters >1:
-                    created_model = create_model(model_id, num_clusters=num_clusters)
-                else:
-                    created_model = create_model(model_id)
+                with st.spinner("Running......"):
+                    if num_clusters >1:
+                        created_model = create_model(model_id, num_clusters=num_clusters)
+                    else:
+                        created_model = create_model(model_id)
                 st.write("#### ",cluster_model)
                 st.write(pull())
                 st.write("Assign")
