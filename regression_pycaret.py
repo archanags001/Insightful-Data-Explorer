@@ -100,12 +100,14 @@ def regressionPycaret():
                 # with st.spinner("Running......"):
                 try:
                     s_reg = setup(data_reg, target=target_reg, session_id=123)
-                except KeyError as e:
+                except Exception as e:
                     st.error(str(e))
                 st.markdown('<p style="color:#4FFF33">Setup Successfully Completed!</p>', unsafe_allow_html=True)
                 st.dataframe(pull())
                 # get best model
-                best_reg = compare_models()
+                try:
+                    best_reg = compare_models()
+                except KeyError as e:st.error(str(e))
                 # get the scoring grid
                 results_reg = pull()
                 st.write("### Best Model: ", results_reg['Model'].iloc[0])
