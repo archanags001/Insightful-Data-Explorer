@@ -100,7 +100,7 @@ def regressionPycaret():
                 # with st.spinner("Running......"):
                 try:
                     s_reg = setup(data_reg, target=target_reg, session_id=123)
-                except ValueError as e:
+                except Exception as e:
                     st.error(str(e))
                 st.markdown('<p style="color:#4FFF33">Setup Successfully Completed!</p>', unsafe_allow_html=True)
                 st.dataframe(pull())
