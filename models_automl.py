@@ -24,7 +24,7 @@ def ml_models():
     """)
     st.info("Please note that there may be some processing delay during the AutoML execution.")
 
-    dataset = dataset = data_load()
+    dataset = data_load()
 
 
     if len(dataset) > 0:
