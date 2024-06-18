@@ -109,11 +109,11 @@ def classificationPycaret():
                     st.session_state.button_clicked_cls = False
 
             if st.session_state.button_clicked_cls:
-                # with st.spinner("Running......"):
-                try:
-                    s = setup(data, target=target, session_id=123)
-                except Exception as e:
-                    st.error(str(e))
+                with st.spinner("Running......"):
+                    try:
+                        s = setup(data, target=target, session_id=123)
+                    except Exception as e:
+                        st.error(str(e))
                 st.markdown('<p style="color:#4FFF33">Setup Successfully Completed!</p>', unsafe_allow_html=True)
                 st.dataframe(pull())
                 # get best model
