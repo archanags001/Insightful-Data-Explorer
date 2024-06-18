@@ -70,7 +70,10 @@ def clusteringPycaret():
                     # Split data
                     data = dataset[features].sample(frac=train_size, random_state=786).reset_index(drop=True)
                     data_unseen = dataset[features].drop(data.index).reset_index(drop=True)
-                    s = setup(data, session_id=123)
+                    try:
+                        s = setup(data, session_id=123)
+                    except Exception as e:
+                        st.error(str(e))
                     model_df = models()
                     if not model_df.empty:
                         cluster_model = st.selectbox("Choose the model name", model_df['Name'].tolist())
