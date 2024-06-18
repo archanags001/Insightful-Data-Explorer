@@ -95,19 +95,20 @@ def anomalyPycaret():
                     # save model
                     save_model(created_model, 'anomaly_model')
                     st.write("#### t-SNE (3d) Dimension Plot")
-                    try:
-                        plot_model(created_model, plot='tsne', display_format='streamlit')
-                    except:
-                        st.write("The plot is unavailable; please consider using alternative model.")
-
-                    try:
-                        # Predicts label on the holdout set.
-                        pred_holdout = predict_model(created_model, data_unseen)
-                        st.write('#### Predictions from holdout set (validation set)')
-                        st.dataframe(pred_holdout)
-                    except:
-                        st.error("Something went wrong, please try other models")
-                # else:
+                    with st.spinner("Running......"):
+                        try:
+                            plot_model(created_model, plot='tsne', display_format='streamlit')
+                        except:
+                            st.write("The plot is unavailable; please consider using alternative model.")
+    
+                        try:
+                            # Predicts label on the holdout set.
+                            pred_holdout = predict_model(created_model, data_unseen)
+                            st.write('#### Predictions from holdout set (validation set)')
+                            st.dataframe(pred_holdout)
+                        except:
+                            st.error("Something went wrong, please try other models")
+                    # else:
                 #     st.warning("Choose the models")
 
                     if uploaded_file_test:
