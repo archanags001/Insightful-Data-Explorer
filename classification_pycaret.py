@@ -120,8 +120,9 @@ def classificationPycaret():
                 best = compare_models()
                 # get the scoring grid
                 results = pull()
-                st.write("### Best Model: ", results['Model'].iloc[0])
-                st.write('#### Comparing All Models')
+                with st.spinner("Running......"):
+                    st.write("### Best Model: ", results['Model'].iloc[0])
+                    st.write('#### Comparing All Models')
                 model_df = st.dataframe(pull())
                 # # Get the name of the best model
                 model_name = None
