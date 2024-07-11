@@ -147,7 +147,7 @@ def regressionPycaret():
                     tune_YN_reg = st.checkbox ("Do you need to tune the model")
 
                     selected_metrics_reg = st.multiselect("Select regression metrics to evaluate",options=list(metrics_dict_reg.keys()))
-                    uploaded_file_test_reg = st.file_uploader("If you want to upload a test dataset,Upload CSV or Excel test file",
+                    uploaded_file_test_reg = st.file_uploader("If you want to upload a test dataset,Upload CSV or Excel test file (optional)",
                                                           type=["csv", "xlsx"], key='test')
 
                     submit_button_reg = st.form_submit_button(label='Run AutoML')
