@@ -1,12 +1,14 @@
 import streamlit as st
 from streamlit_option_menu import option_menu
 from home import home_page
+from chat_with_data_llm import chatData
 from edit_data import edit_dataframe
 from data_profiling import stProfile
 from visualization import visualizatn
 from featureEngineering import feature_engineering
 from models_automl import ml_models
 from about import about_info
+from contact_form import contact
 
  # Page setup
 st.set_page_config(
