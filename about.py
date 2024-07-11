@@ -26,10 +26,6 @@ def about_info():
     ### Created By:
     ##### **Archana**: [LinkedIn Profile](https://www.linkedin.com/in/archanags001)
     
-    
-    ### Contact Us:
-    For inquiries or feedback, please contact **archanags203@gmail.com**
-    
 
     ### Disclaimer:
     This app is for demonstration and educational purposes only. Use the results and insights responsibly.
