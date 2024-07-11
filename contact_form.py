@@ -56,11 +56,6 @@ def contact():
     st.markdown("##### If you have any questions, feedback, or encounter any issues using this app, please fill out "
                 "the form below, and I'll get back to you as soon as possible.")
     apply_custom_css()
-    # Streamlit input fields
-    # Streamlit input fields
-    # name = st.text_input("Your name")
-    # email = st.text_input("Your email")
-    # message = st.text_area("Your message")
     contact_form = """
             <div class="container">
                 <form action="https://formsubmit.co/d68136092d5b1774aa904c6fd1a654aa" method="POST">
