@@ -63,7 +63,7 @@ def contact():
     # message = st.text_area("Your message")
     contact_form = """
             <div class="container">
-                <form action="https://formsubmit.co/archanags203@gmail.com" method="POST">
+                <form action="https://formsubmit.co/d68136092d5b1774aa904c6fd1a654aa" method="POST">
                     <label for="name">Name</label>
                     <input type="text" name="name" placeholder="Your name.." required>
                     <label for="email">Email</label>
