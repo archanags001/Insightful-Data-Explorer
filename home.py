@@ -56,11 +56,13 @@ def home_page():
 
         #### Features:
         - **Upload Data:** Easily upload your data in CSV or Excel format.
+        - **Chat with Data:** InsightBot allows you to chat with your data.
         - **Edit Data:** Make changes to your dataset right from the app.
         - **Data Visualization:** Create insightful visualizations to understand your data better.
         - **Feature Engineering:** Perform various feature engineering techniques to prepare your data for modeling.
         - **AutoML:** Use automated machine learning to create predictive models without writing a single line of code.
         """)
+    st.info("Disclaimer: The service may be unavailable if too many people use it concurrently. Thank you for your understanding.")
     # Initialize session state
     if 'startbutton' not in st.session_state:
         st.session_state.startbutton = False
@@ -87,10 +89,11 @@ def home_page():
     st.markdown(""" 
         #### How to Use: 
         1. **Upload Your Data:** Click on the 'Start' button to upload your CSV or Excel file.
-        2. **Edit Your Data:** Navigate to the 'Data Edit' tab to make modifications to your dataset.
-        3. **Visualize Your Data:** Use the 'Visualization' tab to generate different types of charts and graphs.
-        4. **Feature Engineering:** Go to the 'Feature Engineering' tab to create and modify features.
-        5. **AutoML:** Visit the 'AutoML' tab to automatically train and evaluate machine learning models.
+        2. **Chat with Data:** Type your questions regarding the loaded data. InsightBot will provide answers to your queries. If you're not satisfied with the response, please ask again.
+        3. **Edit Your Data:** Navigate to the 'Data Edit' tab to make modifications to your dataset.
+        4. **Visualize Your Data:** Use the 'Visualization' tab to generate different types of charts and graphs.
+        5. **Feature Engineering:** Go to the 'Feature Engineering' tab to create and modify features.
+        6. **AutoML:** Visit the 'AutoML' tab to automatically train and evaluate machine learning models.
 
         Get started by selecting an option from the sidebar!
 
