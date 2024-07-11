@@ -15,6 +15,7 @@ def stProfile():
         [YData Profiling](https://docs.profiling.ydata.ai/latest/).  Gain insights into data 
         distributions, correlations, missing values, and more with just a few clicks.
         """)
+    st.info("Please note that there may be a processing delay during data profiling.")
 
     dataset = st.session_state.df
     if len(dataset) > 0:
