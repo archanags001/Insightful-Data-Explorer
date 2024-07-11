@@ -71,7 +71,7 @@ def anomalyPycaret():
                         # selected_metrics = st.multiselect("Select metrics to evaluate",
                         #                                   options=list(metrics_dict.keys()))
                         st.write(" ")
-                        uploaded_file_test = st.file_uploader("If you want to upload a test dataset, upload CSV or Excel test "
+                        uploaded_file_test = st.file_uploader("If you want to upload a test dataset, upload CSV or Excel test (optional) "
                                                               "file",type=["csv", "xlsx"], key='test')
                         st.write(" ")
 
