@@ -132,11 +132,11 @@ def main():
         # Other sidebar elements
         st.sidebar.image("logo_image.png", width=300,use_column_width=True)
         # Option menu in sidebar
-        pages = ["Home", "Data Editor", "Profiling", "Visualization", "Feature Engineering", "Auto ML", "About"]
+        pages = ["Home", "Chat with data", "Data Editor", "Profiling", "Visualization", "Feature Engineering", "Auto ML", "About", "Contact"]
         nav_tab_op = option_menu(
             menu_title="Menu",
             options=pages,
-            icons=['house', 'pencil-square' ,'file-earmark-bar-graph', 'bar-chart-line', 'tools', 'robot', 'info-circle'],
+            icons=['house', 'chat', 'pencil-square' ,'file-earmark-bar-graph', 'bar-chart-line', 'tools', 'robot', 'info-circle', 'envelope'],
             menu_icon="cast",
             default_index=0,
             styles={
@@ -157,6 +157,8 @@ def main():
     # Main content of the app
     if nav_tab_op == "Home":
         home_page()
+    elif nav_tab_op == "Chat with data":
+        chatData()
     elif nav_tab_op == "Data Editor":
         edit_dataframe()
     elif nav_tab_op == "Profiling":
@@ -169,6 +171,8 @@ def main():
         ml_models()
     elif nav_tab_op == "About":
         about_info()
+    elif nav_tab_op == "Contact":
+        contact()
 
 if __name__ == "__main__":
     main()
