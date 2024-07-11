@@ -151,7 +151,7 @@ def classificationPycaret():
                     tune_YN = st.checkbox ("Do you need to tune the model")
 
                     selected_metrics = st.multiselect("Select classification metrics to evaluate",options=list(metrics_dict.keys()))
-                    uploaded_file_test = st.file_uploader("If you want to upload a test dataset,Upload CSV or Excel test file",
+                    uploaded_file_test = st.file_uploader("If you want to upload a test dataset,Upload CSV or Excel test file (optional)",
                                                           type=["csv", "xlsx"], key='test')
 
                     submit_button = st.form_submit_button(label='Run AutoML')
