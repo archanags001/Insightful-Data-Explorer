@@ -82,7 +82,7 @@ def clusteringPycaret():
                         selected_metrics = st.multiselect("Select classification metrics to evaluate",
                                                           options=list(metrics_dict.keys()))
                         st.write(" ")
-                        uploaded_file_test = st.file_uploader("If you want to upload a test dataset, upload CSV test file",
+                        uploaded_file_test = st.file_uploader("If you want to upload a test dataset, upload CSV test file (optional)",
                                                               type=["csv"], key='test')
                         st.write(" ")
 
