@@ -18,7 +18,7 @@ def about_info():
    ### Technologies:
     - **[AutoViz](https://pypi.org/project/autoviz/0.0.6/)**: Provides automated chart selection for quick data 
     exploration.
-    - **[Google Gemini-1.5-Flash-Latest](https://deepmind.google/technologies/gemini/flash/)**: Allows you to chat with your data
+    - **[Google Gemini-1.5-Flash-Latest](https://deepmind.google/technologies/gemini/flash/)**: Generative artificial intelligence chatbot developed by Google.
     - **[PyCaret](https://pycaret.org)**: Powers the AutoML capabilities for model building and optimization.
     - **[pygwalker](https://kanaries.net/pygwalker)**: Enables customizable data visualizations to gain deeper insights
     - **[Streamlit](https://streamlit.io)**: Used for creating interactive and responsive user interfaces.
