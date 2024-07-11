@@ -13,3 +13,6 @@ statsmodels==0.14.1
 category-encoders==2.6.3
 matplotlib==3.7.5
 openpyxl==3.1.2
+google-generativeai==0.7.0
+google-ai-generativelanguage==0.6.5
+plotly==5.22.0
