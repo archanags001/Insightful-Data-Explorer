@@ -4,6 +4,7 @@ Welcome to the Data Explorer and Machine Learning App! This Streamlit-based appl
 
 
 ## [App link](https://insightful-data-explorer-001.streamlit.app)
+## If you're new to this app, this tutorial [video](https://youtu.be/dwlE4p2uF6k) will be very helpful.
 
 
 ## Table of Contents
