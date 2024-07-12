@@ -63,6 +63,7 @@ def home_page():
         - **AutoML:** Use automated machine learning to create predictive models without writing a single line of code.
         """)
     st.info("Disclaimer: The service may be unavailable if too many people use it concurrently. Thank you for your understanding.")
+    st.markdown("##### If you're new to this app, this tutorial [video](https://youtu.be/dwlE4p2uF6k) will be very helpful.")
     # Initialize session state
     if 'startbutton' not in st.session_state:
         st.session_state.startbutton = False
