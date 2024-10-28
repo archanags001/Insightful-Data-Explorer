@@ -51,7 +51,7 @@ def home_page():
         ### Your One-Stop Solution for Data Handling and Analysis
 
         **Insightful Data Explorer** simplifies the data analysis and machine learning process through a user-friendly 
-        interface. Effortlessly upload, edit, visualize, and engineer features from your data without coding. Explore 
+        interface. Effortlessly upload, interact with, edit, visualize, and engineer features from your data without coding. Explore 
         the capabilities of automated machine learning (AutoML) to effortlessly build predictive models.
 
         #### Features:
