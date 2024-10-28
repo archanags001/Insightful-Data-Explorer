@@ -10,6 +10,7 @@ def about_info():
     ### Key Features:
     - **Data Handling**: Upload CSV or Excel files, edit data, and perform preprocessing tasks such as imputation 
     and outlier handling.
+    - **Chat with Data**: InsightBot allows you to chat with your data
     - **Visualization**: Explore data visually using custom and automated visualization tools.
     - **Feature Engineering**: Transform and create new features to enhance model performance.
     - **AutoML**: Automatically build and compare machine learning models for regression, classification, clustering, 
