@@ -23,7 +23,7 @@ Welcome to the Data Explorer and Machine Learning App! This Streamlit-based appl
 
 ## Technologies
 - **Streamlit**: Interactive and responsive user interface.
-- **Google Gemini-1.5-Flash-Latest**: Generative artificial intelligence chatbot developed by Google.
+- **Google gemini-2.5-flash**: Generative artificial intelligence chatbot developed by Google.
 - **PyCaret**: Automated machine learning.
 - **PygWalker**: Customizable data visualizations.
 - **AutoViz**: Automated chart selection.
