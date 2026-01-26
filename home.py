@@ -10,6 +10,12 @@ def upload_and_preview_data():
             if uploaded_file.name.endswith('.csv'):
                 try:
                     df = pd.read_csv(uploaded_file)
+                except UnicodeDecodeError:
+                    uploaded_file.seek(0) 
+                    df = pd.read_csv(uploaded_file, encoding='latin1')
+                except pd.errors.ParserError:
+                    uploaded_file.seek(0)
+                    df = pd.read_csv(uploaded_file, sep=None, engine='python')
                 except Exception as e:
                     st.error(str(e))
             elif uploaded_file.name.endswith(('.xlsx', '.xls')):
