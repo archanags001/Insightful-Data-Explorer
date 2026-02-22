@@ -1,4 +1,4 @@
-setuptools>=70.0.0
+setuptools==80.9.0
 streamlit==1.35.0
 streamlit-option-menu ==0.3.12
 streamlit-pandas-profiling==0.1.3
