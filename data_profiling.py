@@ -1,4 +1,5 @@
 import streamlit as st
+import pkg_resources
 from ydata_profiling import ProfileReport
 from streamlit_pandas_profiling import st_profile_report
 def stProfile():
