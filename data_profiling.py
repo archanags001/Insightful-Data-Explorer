@@ -1,6 +1,6 @@
 import streamlit as st
-# from ydata_profiling import ProfileReport
-# from streamlit_pandas_profiling import st_profile_report
+from ydata_profiling import ProfileReport
+from streamlit_pandas_profiling import st_profile_report
 def stProfile():
 
     if 'page' not in st.session_state:
@@ -17,12 +17,12 @@ def stProfile():
         """)
     st.info("Please note that there may be a processing delay during data profiling.")
 
-    # dataset = st.session_state.df
-    # if len(dataset) > 0:
-    #     profile_report = ProfileReport(dataset)
-    #     export = profile_report.to_html()
-    #     st.download_button(label="Download Full Report", data=export, file_name='report.html')
-    #     st_profile_report(profile_report)
+    dataset = st.session_state.df
+    if len(dataset) > 0:
+        profile_report = ProfileReport(dataset)
+        export = profile_report.to_html()
+        st.download_button(label="Download Full Report", data=export, file_name='report.html')
+        st_profile_report(profile_report)
 # import streamlit as st
 # from ydata_profiling import ProfileReport
 # import streamlit.components.v1 as components
